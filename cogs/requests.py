@@ -59,7 +59,7 @@ class Requests(commands.Cog,
                 resp_str = json.dumps(exc.resp, indent=4)
                 await utils.embed_reply(ctx,
                                         title="💢 Something went wrong with your image!",
-                                        description="Please report this issue [here](https://github.com/Willy-JL/ALTIERA-Bot/issues) with the attached error info file.",
+                                        description="Please report this issue [here](https://github.com/WillyJL/ALTIERA-Bot/issues) with the attached error info file.",
                                         file=discord.File(io.StringIO(f"{exc_str}\n\nResponse:\n{resp_str}"), filename="error_info.txt"))
         # Actual command
         req_id = await db.create_request(ctx.author.id, description, image)
@@ -134,7 +134,7 @@ class Requests(commands.Cog,
                 resp_str = json.dumps(exc.resp, indent=4)
                 await utils.embed_reply(ctx,
                                         title="💢 Something went wrong with your image!",
-                                        description="Please report this issue [here](https://github.com/Willy-JL/ALTIERA-Bot/issues) with the attached error info file.",
+                                        description="Please report this issue [here](https://github.com/WillyJL/ALTIERA-Bot/issues) with the attached error info file.",
                                         file=discord.File(io.StringIO(f"{exc_str}\n\nResponse:\n{resp_str}"), filename="error_info.txt"))
         if not remove_image:
             new_image = new_image or image
